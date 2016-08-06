@@ -24,7 +24,7 @@ a {
   z-index: 50;
   /*菜单栏*/ }
   .header #menu {
-    width: 575px;
+    width: 655px;
     height: 40px;
     margin: 0px auto;
     /*当前的菜单栏页*/ }
@@ -47,164 +47,166 @@ a {
     width: 100%;
     text-align: center;
     overflow: hidden; }
+    #main .section h1 {
+      color: #ffffff; }
 
-/*第一页loading动画*/
+/*
+/!*第一页loading动画*!/
+$s1-box-height: 200px;
 @-webkit-keyframes loading1 {
   0% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1); }
+    @include transform(scale(1))
+  }
   50% {
-    -webkit-transform: scale(0.4);
-    -moz-transform: scale(0.4);
-    -ms-transform: scale(0.4);
-    -o-transform: scale(0.4);
-    transform: scale(0.4); }
+    @include transform(scale(0.4))
+  }
   100% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1); } }
-@-webkit-keyframes loading2 {
-  50% {
-    -webkit-transform: scale(0.4);
-    -moz-transform: scale(0.4);
-    -ms-transform: scale(0.4);
-    -o-transform: scale(0.4);
-    transform: scale(0.4);
-    opacity: 0.4;
-    filter: alpha(opacity=40); }
-  100% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-    filter: alpha(opacity=100); } }
-.s1.active .box {
-  width: 405px;
-  height: 200px;
-  margin: 0 auto; }
-  .s1.active .box span {
-    position: relative;
-    display: block;
-    float: left;
-    width: 200px;
-    height: 200px;
-    line-height: 200px; }
-  .s1.active .box .loading1 i {
-    display: inline-block;
-    width: 4px;
-    height: 36px;
-    background-color: #333333;
-    border-radius: 3px;
-    margin: 0 2px; }
-    .s1.active .box .loading1 i:nth-child(1) {
-      -webkit-animation: loading1 1s ease-in 0.5s infinite;
-      -moz-animation: loading1 1s ease-in 0.5s infinite;
-      -ms-animation: loading1 1s ease-in 0.5s infinite;
-      -o-animation: loading1 1s ease-in 0.5s infinite;
-      animation: loading1 1s ease-in 0.5s infinite; }
-    .s1.active .box .loading1 i:nth-child(2) {
-      -webkit-animation: loading1 1s ease-in 0.6s infinite;
-      -moz-animation: loading1 1s ease-in 0.6s infinite;
-      -ms-animation: loading1 1s ease-in 0.6s infinite;
-      -o-animation: loading1 1s ease-in 0.6s infinite;
-      animation: loading1 1s ease-in 0.6s infinite; }
-    .s1.active .box .loading1 i:nth-child(3) {
-      -webkit-animation: loading1 1s ease-in 0.75s infinite;
-      -moz-animation: loading1 1s ease-in 0.75s infinite;
-      -ms-animation: loading1 1s ease-in 0.75s infinite;
-      -o-animation: loading1 1s ease-in 0.75s infinite;
-      animation: loading1 1s ease-in 0.75s infinite; }
-    .s1.active .box .loading1 i:nth-child(4) {
-      -webkit-animation: loading1 1s ease-in 0.9s infinite;
-      -moz-animation: loading1 1s ease-in 0.9s infinite;
-      -ms-animation: loading1 1s ease-in 0.9s infinite;
-      -o-animation: loading1 1s ease-in 0.9s infinite;
-      animation: loading1 1s ease-in 0.9s infinite; }
-    .s1.active .box .loading1 i:nth-child(5) {
-      -webkit-animation: loading1 1s ease-in 1s infinite;
-      -moz-animation: loading1 1s ease-in 1s infinite;
-      -ms-animation: loading1 1s ease-in 1s infinite;
-      -o-animation: loading1 1s ease-in 1s infinite;
-      animation: loading1 1s ease-in 1s infinite; }
-  .s1.active .box .loading2 i {
-    position: absolute;
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #333333; }
-    .s1.active .box .loading2 i:nth-child(1) {
-      top: 58px;
-      -webkit-animation: loading2 1s ease-in 0s infinite;
-      -moz-animation: loading2 1s ease-in 0s infinite;
-      -ms-animation: loading2 1s ease-in 0s infinite;
-      -o-animation: loading2 1s ease-in 0s infinite;
-      animation: loading2 1s ease-in 0s infinite; }
-    .s1.active .box .loading2 i:nth-child(2) {
-      top: 64px;
-      left: 85px;
-      -webkit-animation: loading2 1s ease-in -0.12s infinite;
-      -moz-animation: loading2 1s ease-in -0.12s infinite;
-      -ms-animation: loading2 1s ease-in -0.12s infinite;
-      -o-animation: loading2 1s ease-in -0.12s infinite;
-      animation: loading2 1s ease-in -0.12s infinite; }
-    .s1.active .box .loading2 i:nth-child(3) {
-      top: 78px;
-      left: 80px;
-      -webkit-animation: loading2 1s ease-in -0.24s infinite;
-      -moz-animation: loading2 1s ease-in -0.24s infinite;
-      -ms-animation: loading2 1s ease-in -0.24s infinite;
-      -o-animation: loading2 1s ease-in -0.24s infinite;
-      animation: loading2 1s ease-in -0.24s infinite; }
-    .s1.active .box .loading2 i:nth-child(4) {
-      top: 91px;
-      left: 85px;
-      -webkit-animation: loading2 1s ease-in -0.36s infinite;
-      -moz-animation: loading2 1s ease-in -0.36s infinite;
-      -ms-animation: loading2 1s ease-in -0.36s infinite;
-      -o-animation: loading2 1s ease-in -0.36s infinite;
-      animation: loading2 1s ease-in -0.36s infinite; }
-    .s1.active .box .loading2 i:nth-child(5) {
-      top: 97px;
-      left: 100px;
-      -webkit-animation: loading2 1s ease-in -0.48s infinite;
-      -moz-animation: loading2 1s ease-in -0.48s infinite;
-      -ms-animation: loading2 1s ease-in -0.48s infinite;
-      -o-animation: loading2 1s ease-in -0.48s infinite;
-      animation: loading2 1s ease-in -0.48s infinite; }
-    .s1.active .box .loading2 i:nth-child(6) {
-      top: 90px;
-      left: 115px;
-      -webkit-animation: loading2 1s ease-in -0.6s infinite;
-      -moz-animation: loading2 1s ease-in -0.6s infinite;
-      -ms-animation: loading2 1s ease-in -0.6s infinite;
-      -o-animation: loading2 1s ease-in -0.6s infinite;
-      animation: loading2 1s ease-in -0.6s infinite; }
-    .s1.active .box .loading2 i:nth-child(7) {
-      top: 78px;
-      left: 122px;
-      -webkit-animation: loading2 1s ease-in -0.72s infinite;
-      -moz-animation: loading2 1s ease-in -0.72s infinite;
-      -ms-animation: loading2 1s ease-in -0.72s infinite;
-      -o-animation: loading2 1s ease-in -0.72s infinite;
-      animation: loading2 1s ease-in -0.72s infinite; }
-    .s1.active .box .loading2 i:nth-child(8) {
-      top: 65px;
-      left: 115px;
-      -webkit-animation: loading2 1s ease-in -0.84s infinite;
-      -moz-animation: loading2 1s ease-in -0.84s infinite;
-      -ms-animation: loading2 1s ease-in -0.84s infinite;
-      -o-animation: loading2 1s ease-in -0.84s infinite;
-      animation: loading2 1s ease-in -0.84s infinite; }
+    @include transform(scale(1))
+  }
+}
 
-/*第二页弹球效果*/
+@-webkit-keyframes loading2 {
+  50%{@include transform(scale(0.4));
+      @include opacity(0.4);
+  }
+  100%{@include transform(scale(1));
+      @include opacity(1);
+  }
+}
+
+.s1.active{
+  .box {
+    width: 405px;
+    height: $s1-box-height;
+    margin: 0 auto;
+    span {
+      position: relative;
+      display: block;
+      float: left;
+      width: $s1-box-height;
+      height: $s1-box-height;
+      line-height: $s1-box-height;
+    }
+    .loading1 {
+      i {
+        display: inline-block;
+        width: 4px;
+        height: 36px;
+        background-color: #333333;
+        border-radius: 3px;
+        margin: 0 2px;
+        &:nth-child(1) {
+          @include animation(loading1 1s ease-in $transition-delay infinite)
+        }
+        &:nth-child(2) {
+          @include animation(loading1 1s ease-in $transition-delay*1.2 infinite)
+        }
+        &:nth-child(3) {
+          @include animation(loading1 1s ease-in $transition-delay*1.5 infinite)
+        }
+        &:nth-child(4) {
+          @include animation(loading1 1s ease-in $transition-delay*1.8 infinite)
+        }
+        &:nth-child(5) {
+          @include animation(loading1 1s ease-in $transition-delay*2 infinite)
+        }
+      }
+    }
+    .loading2 {
+      i {
+        position: absolute;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #333333;
+        &:nth-child(1) {
+          top: 58px;
+          @include animation(loading2 1s ease-in 0s infinite)
+
+        }
+        &:nth-child(2) {
+          top: 64px;
+          left: 85px;
+          @include animation(loading2 1s ease-in -0.12s infinite)
+
+        }
+        &:nth-child(3) {
+          top: 78px;
+          left: 80px;
+          @include animation(loading2 1s ease-in -0.24s infinite)
+
+        }
+        &:nth-child(4) {
+          top: 91px;
+          left: 85px;
+          @include animation(loading2 1s ease-in -0.36s infinite)
+
+        }
+        &:nth-child(5) {
+          top: 97px;
+          left: 100px;
+          @include animation(loading2 1s ease-in -0.48s infinite)
+
+        }
+        &:nth-child(6) {
+          top:90px;
+          left: 115px;
+          @include animation(loading2 1s ease-in -0.6s infinite)
+
+        }
+        &:nth-child(7) {
+          top:78px;
+          left: 122px;
+          @include animation(loading2 1s ease-in -0.72s infinite)
+
+        }
+        &:nth-child(8) {
+          top:65px;
+          left:115px;
+          @include animation(loading2 1s ease-in -0.84s infinite)
+
+        }
+      }
+    }
+  }
+}
+*/
+/*第二页水平切入*/
+.s2 ul {
+  width: 700px;
+  margin: 0 auto; }
+  .s2 ul li:nth-child(1) {
+    float: left;
+    -webkit-transform: translateX(-700px);
+    -moz-transform: translateX(-700px);
+    -ms-transform: translateX(-700px);
+    -o-transform: translateX(-700px);
+    transform: translateX(-700px); }
+  .s2 ul li:nth-child(2) {
+    float: right;
+    -webkit-transform: translateX(700px);
+    -moz-transform: translateX(700px);
+    -ms-transform: translateX(700px);
+    -o-transform: translateX(700px);
+    transform: translateX(700px); }
+.s2.active ul li {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transiton: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
+  .s2.active ul li:nth-child(1) {
+    transition-delay: 0.5s; }
+  .s2.active ul li:nth-child(2) {
+    transition-delay: 0.75s; }
+
+/*第三页弹球效果*/
 /*定义时间帧*/
 @-webkit-keyframes ball {
   0% {
@@ -278,19 +280,19 @@ a {
     left: 120px;
     background: rgba(20, 20, 20, 0.3);
     box-shadow: 0 0 25px 20px rgba(20, 20, 20, 0.3); } }
-.s2 .box {
+.s3 .box {
   position: relative;
   width: 250px;
   height: 250px;
   margin: 0 auto; }
-  .s2 .box .ball {
+  .s3 .box .ball {
     width: 100px;
     height: 100px;
     margin-left: 75px;
     transition: 2s;
     background: -webkit-linear-gradient(top, #fff, #999) darkgray;
     box-shadow: inset 0 0 30px #999, inset 0 -15px 70px #999; }
-    .s2.active .box .ball {
+    .s3.active .box .ball {
       border-radius: 50%;
       -webkit-transition-delay: 0.5s;
       -moz-transition-delay: 0.5s;
@@ -302,7 +304,7 @@ a {
       -ms-animation: ball 1s 2s infinite;
       -o-animation: ball 1s 2s infinite;
       animation: ball 1s 2s infinite; }
-    .s2.active .box .ball-shadow {
+    .s3.active .box .ball-shadow {
       position: absolute;
       left: 120px;
       bottom: 0;
@@ -322,33 +324,33 @@ a {
       -o-animation: shadow 1s 2s infinite;
       animation: shadow 1s 2s infinite; }
 
-/*第三页*/
+/*第四页*/
 /*水平展开动画*/
-.s3 ul {
+.s4 ul {
   width: 1000px;
   margin: 0 auto; }
-  .s3 ul li {
+  .s4 ul li {
     float: left;
     margin: 0 10px; }
-    .s3 ul li:nth-child(1) {
+    .s4 ul li:nth-child(1) {
       -webkit-transform: translateX(0);
       -moz-transform: translateX(0);
       -ms-transform: translateX(0);
       -o-transform: translateX(0);
       transform: translateX(0); }
-    .s3 ul li:nth-child(2) {
+    .s4 ul li:nth-child(2) {
       -webkit-transform: translateX(-320px);
       -moz-transform: translateX(-320px);
       -ms-transform: translateX(-320px);
       -o-transform: translateX(-320px);
       transform: translateX(-320px); }
-    .s3 ul li:nth-child(3) {
+    .s4 ul li:nth-child(3) {
       -webkit-transform: translateX(-660px);
       -moz-transform: translateX(-660px);
       -ms-transform: translateX(-660px);
       -o-transform: translateX(-660px);
       transform: translateX(-660px); }
-.s3.active ul li {
+.s4.active ul li {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -360,7 +362,7 @@ a {
   -o-transition: 0.8s 0.5s;
   transition: 0.8s 0.5s; }
 
-/*第四页弹性动画*/
+/*第五页弹性动画*/
 /*定义时间帧*/
 @-webkit-keyframes move1 {
   0% {
@@ -548,55 +550,55 @@ a {
     -ms-transform: translate(0px, 0px);
     -o-transform: translate(0px, 0px);
     transform: translate(0px, 0px); } }
-.s4 ul {
+.s5 ul {
   width: 1000px;
   margin: 0 auto; }
-  .s4 ul li {
+  .s5 ul li {
     float: left;
     margin: 0 10px; }
-    .s4 ul li:nth-child(1) {
+    .s5 ul li:nth-child(1) {
       -webkit-transform: translate(320px, -1000px);
       -moz-transform: translate(320px, -1000px);
       -ms-transform: translate(320px, -1000px);
       -o-transform: translate(320px, -1000px);
       transform: translate(320px, -1000px); }
-    .s4 ul li:nth-child(2) {
+    .s5 ul li:nth-child(2) {
       -webkit-transform: translate(0px, -1000px);
       -moz-transform: translate(0px, -1000px);
       -ms-transform: translate(0px, -1000px);
       -o-transform: translate(0px, -1000px);
       transform: translate(0px, -1000px); }
-    .s4 ul li:nth-child(3) {
+    .s5 ul li:nth-child(3) {
       -webkit-transform: translate(-320px, -1000px);
       -moz-transform: translate(-320px, -1000px);
       -ms-transform: translate(-320px, -1000px);
       -o-transform: translate(-320px, -1000px);
       transform: translate(-320px, -1000px); }
-.s4.active li:nth-child(1) {
+.s5.active li:nth-child(1) {
   -webkit-animation: move1 1s 0.5s forwards;
   -moz-animation: move1 1s 0.5s forwards;
   -ms-animation: move1 1s 0.5s forwards;
   -o-animation: move1 1s 0.5s forwards;
   animation: move1 1s 0.5s forwards; }
-.s4.active li:nth-child(2) {
+.s5.active li:nth-child(2) {
   -webkit-animation: move2 1s 0.5s forwards;
   -moz-animation: move2 1s 0.5s forwards;
   -ms-animation: move2 1s 0.5s forwards;
   -o-animation: move2 1s 0.5s forwards;
   animation: move2 1s 0.5s forwards; }
-.s4.active li:nth-child(3) {
+.s5.active li:nth-child(3) {
   -webkit-animation: move3 1s 0.5s forwards;
   -moz-animation: move3 1s 0.5s forwards;
   -ms-animation: move3 1s 0.5s forwards;
   -o-animation: move3 1s 0.5s forwards;
   animation: move3 1s 0.5s forwards; }
 
-/*第五页*/
+/*第六页*/
 /*垂直切入动画*/
-.s5 ul {
+.s6 ul {
   width: 1000px;
   margin: 0 auto; }
-  .s5 ul li {
+  .s6 ul li {
     float: left;
     margin: 0 10px;
     -webkit-transform: translateY(1000px);
@@ -604,7 +606,7 @@ a {
     -ms-transform: translateY(1000px);
     -o-transform: translateY(1000px);
     transform: translateY(1000px); }
-.s5.active ul li {
+.s6.active ul li {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -615,19 +617,19 @@ a {
   -ms-transiton: 0.8s;
   -o-transition: 0.8s;
   transition: 0.8s; }
-  .s5.active ul li:nth-child(1) {
+  .s6.active ul li:nth-child(1) {
     -webkit-transition-delay: 0.5s;
     -moz-transition-delay: 0.5s;
     -ms-transition-delay: 0.5s;
     -o-transition-delay: 0.5s;
     transition-delay: 0.5s; }
-  .s5.active ul li:nth-child(2) {
+  .s6.active ul li:nth-child(2) {
     -webkit-transition-delay: 0.6s;
     -moz-transition-delay: 0.6s;
     -ms-transition-delay: 0.6s;
     -o-transition-delay: 0.6s;
     transition-delay: 0.6s; }
-  .s5.active ul li:nth-child(3) {
+  .s6.active ul li:nth-child(3) {
     -webkit-transition-delay: 0.75s;
     -moz-transition-delay: 0.75s;
     -ms-transition-delay: 0.75s;

@@ -12,15 +12,16 @@
 <div class="wrapper">
     <div class="header">
         <ul id="menu">
-            <li data-menuanchor="page1" class="active"><a href="#page1">加载动画</a></li>
-            <li data-menuanchor="page2"><a href="#page2">弹球动画</a></li>
-            <li data-menuanchor="page3"><a href="#page3">水平展开</a></li>
-            <li data-menuanchor="page4"><a href="#page4">弹性动画</a></li>
-            <li data-menuanchor="page5"><a href="#page5">垂直切入</a></li>
+            <li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
+            <li data-menuanchor="page2"><a href="#page2">水平切入</a></li>
+            <li data-menuanchor="page3"><a href="#page3">弹球动画</a></li>
+            <li data-menuanchor="page4"><a href="#page4">水平展开</a></li>
+            <li data-menuanchor="page5"><a href="#page5">弹性动画</a></li>
+            <li data-menuanchor="page6"><a href="#page6">垂直切入</a></li>
         </ul>
     </div>
     <div id="main">
-        <div class="section s1 active">
+        <!--<div class="section s1 active">
             <div class="box">
                 <span class="loading1">
                     <i></i>
@@ -40,20 +41,21 @@
                     <i></i>
                 </span>
             </div>
+        </div>-->
+        <div class="section s1 active">
+            <h1>css3动画效果</h1>
         </div>
-        <div class="section s2">
+        <div class="section s2 ">
+            <ul class="box">
+                <li><img src="img/s3/food1.jpg"></li>
+                <li><img src="img/s3/food3.jpg"></li>
+            </ul>
+        </div>
+        <div class="section s3">
             <div class="box">
                 <div class="ball"></div>
                 <div class="ball-shadow"></div>
             </div>
-        </div>
-        <div class="section s3">
-            <ul class="box">
-                <li><img src="img/s3/food1.jpg"></li>
-                <li><img src="img/s3/food3.jpg"></li>
-                <li><img src="img/s3/food2.jpg"></li>
-            </ul>
-
         </div>
         <div class="section s4">
             <ul class="box">
@@ -61,8 +63,16 @@
                 <li><img src="img/s3/food3.jpg"></li>
                 <li><img src="img/s3/food2.jpg"></li>
             </ul>
+
         </div>
         <div class="section s5">
+            <ul class="box">
+                <li><img src="img/s3/food1.jpg"></li>
+                <li><img src="img/s3/food3.jpg"></li>
+                <li><img src="img/s3/food2.jpg"></li>
+            </ul>
+        </div>
+        <div class="section s6">
             <ul class="box">
                 <li><img src="img/s3/food1.jpg"></li>
                 <li><img src="img/s3/food3.jpg"></li>
@@ -77,26 +87,28 @@
 <script>
     $(function () {
         $("#main").fullpage({
-            verticalCentered: true,                                       //内容垂直居中
+            verticalCentered: true,                                                             //内容垂直居中
             css3: true,
-            sectionsColor: ['#23BBB1', '#666699', '#007b52', '#009966', '#336699'],   //设置每一页背景颜色
-            anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],                   //定义锚链接
-            scrollingSpeed: 500,                                              //滚动速度
+            setAllowScrolling:true,                                                             //添加或删除鼠标滚轮，第二个参数为方向
+            scrollingSpeed: 500,                                                                //滚动速度
+            sectionsColor: ['#007b52','#006699', '#666699', '#007b52', '#009966', '#336699'],   //设置每一页背景颜色
             menu: "#menu",
-            navigation: true,                                              //显示项目导航
-            navigationPosition: 'right',                                   //导航位置
-            navigationTooltips: ['首页', '专业技能', '项目经验', '个人信息', '联系方式'],     //导航圈的文字
+            anchors: ['page1', 'page2', 'page3', 'page4', 'page5','page6'],                     //定义锚链接
+            navigation: true,                                                                   //显示项目导航
+            navigationPosition: 'right',                                                        //导航位置
+            navigationTooltips: ['首页','水平切入', '弹球动画', '水平展开', '弹性动画', '垂直切入'],     //导航圈的文字
             navigationColor: '',                                      //导航颜色
-            slidesNavigation: '',                               //显示左右滑块的项目导航
+            slidesNavigation: '',                                     //显示左右滑块的项目导航
             slidesNavPosition: 'bottom',                              //设置左右滑块的导航位置
-            controlArrowColor: '#fff',                             //设置左右滑块箭头背景色
+            controlArrow:true,                                        //是否通过箭头控制slide幻灯片
+            controlArrowColor: '#fff',                                //设置左右滑块箭头背景色
             slidesColor: ['#254875', '#254587'],
 //            loopBottom:true,                                       //滑到最底部后是否返回顶部
 //            loopTop:true,                                          //滑到顶部后是否返回底部
-            autoScrolling: true,                                  //是否使用插件的滑动方式，否定则有滚动条
+            autoScrolling: true,                                     //是否使用插件的滑动方式，否定则有滚动条
             scrollOverflow: '',                                      //内容超过满屏是否显示滚动条
-            keyboardScrolling: true,                                   //是否使用键盘方向导航
-            continuousVertical: true,                                  //是否循环滚动
+            keyboardScrolling: true,                                 //是否使用键盘方向导航
+            continuousVertical: true,                                //是否循环滚动
         });
 
     });
